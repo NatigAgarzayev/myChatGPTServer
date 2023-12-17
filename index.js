@@ -13,6 +13,18 @@ const openai = new OpenAI({
     apiKey: process.env.KEY_CHAT,
 })
 
+app.get("/", (req, res) => {
+    try{
+        res.json({message: "Hello, everything is fine!"})
+    }catch(error){
+        res.json({
+            text: {
+                content: error
+            }
+        })
+    }
+})
+
 app.post("/send-message", async (req, res) => {
     const textContent = req.body.content
     try {
