@@ -4,8 +4,11 @@
   "type": "module",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
-    "start": "nodemon index"
+    "start": "node index"
   },
   "keywords": [],
   "author": "",
